@@ -13,25 +13,21 @@ public class Egg extends FarmObject implements Interactable, Updatable{
 	private int cycleCount = 0;
 	
 	public Egg(Point2D p) {
-		// TODO Auto-generated constructor stub
 		super(p);
 	}	
 	
 	public Egg(Point2D p, int cycleCount) {
-		// TODO Auto-generated constructor stub
 		super(p);
 		this.cycleCount = cycleCount;
 	}
 	
 	@Override
 	public int getLayer() {
-		// TODO Auto-generated method stub
 		return 2;
 	}
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
 		cycleCount++;
 	
 		if(timeTo_BirthOrDie()){
@@ -42,7 +38,6 @@ public class Egg extends FarmObject implements Interactable, Updatable{
 
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 			Farm.getInstance().addPoints(1);
 			Farm.getInstance().imagesTEMP.remove(this);
 	}
@@ -89,7 +84,6 @@ public class Egg extends FarmObject implements Interactable, Updatable{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ";" + cycleCount;
 	}
 }

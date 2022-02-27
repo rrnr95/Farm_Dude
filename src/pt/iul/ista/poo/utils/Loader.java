@@ -98,7 +98,6 @@ public final class Loader {
 			fileReader.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 		

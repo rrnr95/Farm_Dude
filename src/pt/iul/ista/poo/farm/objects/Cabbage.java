@@ -13,7 +13,6 @@ public class Cabbage extends Vegetable {
 	public Cabbage(Point2D p, int state) {
 		super(p);
 		setState(state);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Cabbage(Point2D p, int state, int cycleCount){
@@ -30,7 +29,6 @@ public class Cabbage extends Vegetable {
 	
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
 		if(isCared == true){
 			isCared = false;
 		}
@@ -53,7 +51,6 @@ public class Cabbage extends Vegetable {
 	
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 		if(getState() == 0)
 			Care();
 		else{
@@ -66,7 +63,6 @@ public class Cabbage extends Vegetable {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ";" + cycleCount + ";" + isCared;
 	}
 }

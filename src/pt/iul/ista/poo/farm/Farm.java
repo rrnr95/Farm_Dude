@@ -34,7 +34,6 @@ public class Farm implements Observer {
 	public List<ImageTile> imagesTEMP;
 	private boolean spaceOn = false;
 
-	// TODO
 	private static final String SAVE_FNAME = "config/savedGame";
 
 	private static final int MIN_X = 5;
@@ -63,7 +62,7 @@ public class Farm implements Observer {
 
 		ImageMatrixGUI.setSize(max_x, max_y);
 
-		// Não usar ImageMatrixGUI antes de inicializar o tamanho		
+		// Nï¿½o usar ImageMatrixGUI antes de inicializar o tamanho		
 		// TODO
 
 		loadScenario();
@@ -214,7 +213,7 @@ public class Farm implements Observer {
 		return max_y;
 	}
 
-	// Não precisa de alterar nada a partir deste ponto
+	// Nï¿½o precisa de alterar nada a partir deste ponto
 	private void play() {
 		ImageMatrixGUI.getInstance().addObserver(this);
 		ImageMatrixGUI.getInstance().go();

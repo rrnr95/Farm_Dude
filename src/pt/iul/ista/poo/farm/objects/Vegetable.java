@@ -13,7 +13,6 @@ public class Vegetable extends FarmObject implements Updatable, Interactable{
 
 	public Vegetable(Point2D p) {
 		super(p);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Vegetable(Point2D p, int state){
@@ -35,18 +34,14 @@ public class Vegetable extends FarmObject implements Updatable, Interactable{
 
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
-		
 	}	
 	
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		if(this.state == 0)
 			return "small_" + super.getName();
 		else if(this.state == 1)
@@ -57,7 +52,6 @@ public class Vegetable extends FarmObject implements Updatable, Interactable{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ";" + getState();
 	}
 	

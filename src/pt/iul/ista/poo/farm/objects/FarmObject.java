@@ -49,7 +49,6 @@ public abstract class FarmObject implements ImageTile {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return getName() + ";" + getPosition().getX() + ";" + getPosition().getY();
 	}
 	

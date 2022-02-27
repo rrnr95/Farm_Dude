@@ -14,14 +14,9 @@ public class Sheep extends Animal{
 							  		2 - famished
 								*/
 
-	public Sheep(Point2D p) {
-		super(p);
-		// TODO Auto-generated constructor stub
-	}
-	public Sheep() {
-		// TODO Auto-generated constructor stub
-		super();
-	}
+	public Sheep(Point2D p) {super(p);}
+
+	public Sheep() {super();}
 	
 	public Sheep(Point2D p, int state){
 		super(p);
@@ -90,7 +85,6 @@ public class Sheep extends Animal{
 	
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		if(state == 2)
 			return "famished_" + super.getName();
 		else
@@ -99,7 +93,6 @@ public class Sheep extends Animal{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return getName() + ";" + getPosition().getX() + ";" + getPosition().getY() + ";" + cycleCount + ";" + state;
 	}
 	

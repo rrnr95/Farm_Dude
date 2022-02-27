@@ -1,9 +1,7 @@
 package pt.iul.ista.poo.farm.objects;
 
 import pt.iul.ista.poo.farm.Farm;
-import pt.iul.ista.poo.gui.ImageTile;
 import pt.iul.ista.poo.utils.Point2D;
-import pt.iul.ista.poo.farm.objects.Land;
 
 
 public class Cabage extends Vegetable {
@@ -14,7 +12,6 @@ public class Cabage extends Vegetable {
 	public Cabage(Point2D p, int state) {
 		super(p);
 		setState(state);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Cabage(Point2D p, int state, int cycleCount){
@@ -25,7 +22,6 @@ public class Cabage extends Vegetable {
 	
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
 		if(isCared == true){
 			isCared = false;
 		}
@@ -41,7 +37,7 @@ public class Cabage extends Vegetable {
 		}
 	}
 	
-	public void Care(){
+	public void care(){
 		cycleCount+= 2;
 		isCared = true;
 	}
@@ -50,11 +46,11 @@ public class Cabage extends Vegetable {
 	public void interact() {
 		// TODO Auto-generated method stub
 		if(getState() == 0)
-			Care();
+			care();
 		else{
 			if(getState() == 1)
 				Farm.getInstance().setPoints(Farm.getInstance().getPoints() + 2);
-			Farm.getInstance().imagesTEMP.add(Land.landAfterHarvest(this.getPosition()));
+			Farm.getInstance().imagesTEMP.add(Land.unplowedLand(this.getPosition()));
 			Farm.getInstance().imagesTEMP.remove(this);		
 		}
 	}

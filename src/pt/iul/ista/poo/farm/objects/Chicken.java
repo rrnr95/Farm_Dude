@@ -15,12 +15,10 @@ public class Chicken extends Animal implements Interactable, Updatable {
 	boolean canLayEgg, canMove;
 	
 	public Chicken(Point2D p) {
-		// TODO Auto-generated constructor stub
 		super(p);
 	}
 	
 	public Chicken() {
-		// TODO Auto-generated constructor stub
 		super();
 	}
 	
@@ -32,7 +30,6 @@ public class Chicken extends Animal implements Interactable, Updatable {
 	
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 		for(ImageTile i: Farm.getInstance().images)
 			if(i.getPosition().equals(this.getPosition()) && i instanceof Egg)
 				return;
@@ -43,7 +40,6 @@ public class Chicken extends Animal implements Interactable, Updatable {
 	
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub
 		cycleCount++;
 		
 		if(isMultipleOfTen(cycleCount) && canMove){
@@ -101,7 +97,6 @@ public class Chicken extends Animal implements Interactable, Updatable {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ";" + cycleCount + ";" + isCycleEven;
 	}
 	

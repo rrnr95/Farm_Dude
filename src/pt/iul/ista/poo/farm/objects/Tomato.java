@@ -12,7 +12,6 @@ public class Tomato extends Vegetable {
 	public Tomato(Point2D p, int state) {
 		super(p);
 		setState(state);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Tomato(Point2D p, int state, int cycleCount, int caredCounter){
@@ -30,7 +29,6 @@ public class Tomato extends Vegetable {
 	
 	@Override
 	public void update() {
-		// TODO Auto-generated method stub	
 		if(getState() == 0){
 			if(isCared == true){
 				cycleCount++;
@@ -55,7 +53,6 @@ public class Tomato extends Vegetable {
 	
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 		if(getState() == 0){
 			isCared = true;
 			caredCounter = 10;
@@ -70,7 +67,6 @@ public class Tomato extends Vegetable {
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return super.toString() + ";" + cycleCount + ";" + isCared + ";" + caredCounter;
 	}
 

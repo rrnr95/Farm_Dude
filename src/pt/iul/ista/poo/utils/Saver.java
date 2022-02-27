@@ -30,7 +30,6 @@ public final class Saver {
 			fileWriter.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
 	}

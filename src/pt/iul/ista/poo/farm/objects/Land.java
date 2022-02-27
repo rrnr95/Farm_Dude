@@ -16,14 +16,12 @@ public class Land extends FarmObject implements Interactable{
 	public Land(Point2D p, boolean plowed) {
 		super(p);
 		this.plowed = plowed;
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Land(Point2D p, boolean plowed, boolean hasVegie){
 		super(p);
 		this.plowed = plowed;
 		this.hasVegie = hasVegie;
-		// TODO Auto-generated constructor stub
 	}
 	
 	public boolean isPlowed(){
@@ -40,7 +38,6 @@ public class Land extends FarmObject implements Interactable{
 	
 	@Override
 	public void interact() {
-		// TODO Auto-generated method stub
 		Point2D position = this.getPosition();
 		for(ImageTile i: Farm.getInstance().images)
 			if(position.equals(i.getPosition()) && i.getLayer() > 0)
@@ -70,7 +67,6 @@ public class Land extends FarmObject implements Interactable{
 	
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		if(!plowed){
 			return super.getName();
 		}
@@ -81,7 +77,6 @@ public class Land extends FarmObject implements Interactable{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "land" + ";" + getPosition().getX() + ";" + getPosition().getY() + ";" + isPlowed() + ";" +  hasVegie;	
 	}
 }
